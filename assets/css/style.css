@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #080b15;
+    background-color: #FFAB00;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,7 +20,7 @@ h4 {
 }
 
 canvas {
-    border: 2px solid yellow;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 button {
@@ -100,7 +100,7 @@ button {
 }
 
 .slide::-webkit-scrollbar-thumb {
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     outline: 1px solid rgb(55, 83, 110);
     border-radius: 20px;
 }
@@ -117,7 +117,7 @@ button {
 }
 
 .slide .active {
-    border: 1px solid yellow;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 2px;
 }
 
@@ -130,7 +130,7 @@ button {
 
 .buttons button {
     padding: 1em 2em;
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     color: #000;
