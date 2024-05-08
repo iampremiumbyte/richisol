@@ -405,4 +405,4 @@ const resize = () => {
 
 window.addEventListener("resize", init);
 
-init();
+window.addEventListener("load", init)
