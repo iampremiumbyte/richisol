@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>$Richi</title>
+  </head>
+  <body>
+    <div class="container main">
+      <div class="meme-wrap">
+        <h2 class="title">create your richi</h2>
+        <canvas width="100" height="100" id="canvas" class="canvas"></canvas>
+        <div class="buttons">
+          <button class="reset" onclick="reset()">
+            <img src="/assets/icons/reset.png" alt="" srcset="" />
+            Reset
+          </button>
+          <button class="random" onclick="randomize()">
+            <img src="/assets/icons/shuffle.png" alt="" srcset="" />
+            Random
+          </button>
+          <button class="download" onclick="download()">
+            <img src="/assets/icons/downloads.png" alt="" srcset="" />
+            Download
+          </button>
+        </div>
+      </div>
+      <div class="controllers-wrap">
+        <!-- background -->
+        <h4>Background</h4>
+        <div class="slide backgrounds" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/bg-1.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img id="testtImg" src="/assets/TRAITS/bg-2.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-3.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-4.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-5.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-6.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-7.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-8.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-9.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-10.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-11.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-12.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-13.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/bg-14.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Aura</h4>
+        <div class="slide auras" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/aura-1.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-2.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-3.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-4.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-5.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-6.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-7.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-8.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-9.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-10.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-11.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/aura-12.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Body</h4>
+        <div class="slide bodies" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/body-bitcolor.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-blacklight.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-blackwhite.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-chromacat.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-dark.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-invert.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-light.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-main.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-pinkenergy.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-purple.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-pinkfur.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-pinklighting.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-purple.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-roschac.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-satura.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/body-shadow.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Flags</h4>
+        <div class="slide flags" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/flags-china.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/flags-dubai.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/flags-japan.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/flags-russia.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/flags-usa.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Face</h4>
+        <div class="slide faces" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/eyes-sad.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-3d.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-shrek.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-anime1.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-anime2.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-anime3.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-anime4.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-anime5.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-big.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-ciborg.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-ciborg.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-ciclope.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-ciclops.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-confused.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img
+              src="/assets/TRAITS/eyes-eyebrownmoustache.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-glass.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-goku.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-harrypot.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-horny.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-illuminati.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-joji.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-leaving.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-pinkwindow.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-round.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-sad.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-shrek.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-swim.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-tomas.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-trollface.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-trollfaceexe.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-turndown.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-uwu.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-wut.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/eyes-yellowglass.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Head</h4>
+        <div class="slide heads" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/head-3dpinlk.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-animeboy.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-blackpower.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-blonde.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-chinesegirl.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-chopsuey.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-chunli.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-cutemessedup.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img
+              src="/assets/TRAITS/head-dirtyunderwear.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="item">
+            <img
+              src="/assets/TRAITS/head-greenanimehair.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-hairman.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-hat.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-japanese.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-joint.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-kunglao.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-lilgirlflower.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-main.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-mario.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-mickeymouse.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-nikebeanie.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-pan.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-piercing.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-pinkgirl.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-redcapbeer.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-rocklee.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-samuraiwoman.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-spike.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-sushiman.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-swimglass.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-trasherhat.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-white.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/head-xxxx.png" alt="" srcset="" />
+          </div>
+        </div>
+
+        <h4>Objects</h4>
+        <div class="slide objects" id="bgSlide">
+          <div class="item">
+            <img src="/assets/icons/ban.png" alt="" srcset="" />
+          </div>
+          <div class="item active">
+            <img src="/assets/TRAITS/obj-beer.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-coke.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-couragedog.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-dexter.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-grass.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-rtx.png" alt="" srcset="" />
+          </div>
+          <div class="item">
+            <img src="/assets/TRAITS/obj-shrek.png" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
